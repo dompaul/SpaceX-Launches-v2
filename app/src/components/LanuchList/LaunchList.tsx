@@ -1,5 +1,5 @@
 import React from "react";
-import LaunchItem from "../LaunchItem/LaunchItem";
+import { LaunchItem } from "../LaunchItem";
 import { LaunchOption } from "../../models/LaunchModel";
 import LABEL from "../../constants/Labels";
 
@@ -11,7 +11,7 @@ interface LaunchListProps {
   sort: boolean;
 }
 
-const LaunchList: React.FC<LaunchListProps> = ({
+export const LaunchList: React.FC<LaunchListProps> = ({
   items,
   filter,
   loaded,
@@ -49,5 +49,3 @@ const LaunchList: React.FC<LaunchListProps> = ({
     </ul>
   );
 };
-
-export default LaunchList;

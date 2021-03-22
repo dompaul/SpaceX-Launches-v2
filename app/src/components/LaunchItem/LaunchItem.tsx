@@ -7,7 +7,7 @@ interface LaunchItemProps {
   index: number;
 }
 
-const LaunchItem: React.FC<LaunchItemProps> = ({ item, index }) => {
+export const LaunchItem: React.FC<LaunchItemProps> = ({ item, index }) => {
   return (
     <li key={index} className="launch-item">
       <div className="launch-item__mission-content">
@@ -23,5 +23,3 @@ const LaunchItem: React.FC<LaunchItemProps> = ({ item, index }) => {
     </li>
   );
 };
-
-export default LaunchItem;

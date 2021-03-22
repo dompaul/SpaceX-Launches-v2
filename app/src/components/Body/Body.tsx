@@ -1,12 +1,12 @@
 import React from "react";
 import CONSTANTS from "../../constants/Config";
 import LABEL from "../../constants/Labels";
-import LaunchList from "../LanuchList/LaunchList";
-import Button from "../Button/Button";
-import Select from "../Select/Select";
-import { useLaunchContext } from "../../contexts/LaunchContext";
+import { LaunchList } from "../LanuchList";
+import { Button } from "../Button";
+import { Select } from "../Select";
+import { useLaunchContext } from "../../contexts/LaunchContext/LaunchContext";
 
-const Body: React.FC = () => {
+export const Body: React.FC = () => {
   const {
     loaded,
     error,
@@ -58,5 +58,3 @@ const Body: React.FC = () => {
     </div>
   );
 };
-
-export default Body;

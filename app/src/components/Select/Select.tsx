@@ -11,7 +11,7 @@ interface SelectProps {
   allowDisabledState: boolean;
 }
 
-const Select: React.FC<SelectProps> = ({
+export const Select: React.FC<SelectProps> = ({
   label,
   classes,
   years,
@@ -42,5 +42,3 @@ const Select: React.FC<SelectProps> = ({
     </select>
   );
 };
-
-export default Select;

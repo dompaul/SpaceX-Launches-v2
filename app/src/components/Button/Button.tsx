@@ -11,7 +11,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   classes,
   label,
   allowDisabledState,
@@ -21,11 +21,10 @@ const Button: React.FC<ButtonProps> = ({
   const buttonClasses = cx(classes, {
     disabled: allowDisabledState ? error : "",
   });
+
   return (
     <button onClick={onClick} className={buttonClasses}>
       {label}
     </button>
   );
 };
-
-export default Button;

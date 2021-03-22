@@ -4,7 +4,7 @@ import "./index.css";
 import "./assets/styles/index.scss";
 import { App } from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
-import { LaunchProvider } from "./contexts/LaunchContext";
+import { LaunchProvider } from "./contexts/LaunchContext/LaunchContext";
 
 ReactDOM.render(
   <React.StrictMode>

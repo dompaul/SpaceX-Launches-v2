@@ -1,10 +1,10 @@
 import React from "react";
 import CONSTANTS from "../../constants/Config";
 import LABEL from "../../constants/Labels";
-import Button from "../../components/Button/Button";
-import { useLaunchContext } from "../../contexts/LaunchContext";
+import { Button } from "../../components/Button";
+import { useLaunchContext } from "../../contexts/LaunchContext/LaunchContext";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const { listLaunches, loaded, error, filter } = useLaunchContext();
   return (
     <header className="app__header">
@@ -24,5 +24,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;
