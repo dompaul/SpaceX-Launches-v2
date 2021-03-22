@@ -1,1 +1,1 @@
-export { getLaunchesAPI } from "./getLaunches";
+export { GetLaunchesAPI } from "./GetLaunches";

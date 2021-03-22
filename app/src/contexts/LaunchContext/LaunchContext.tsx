@@ -1,6 +1,6 @@
 import React from "react";
 import { LaunchOption } from "../../models/LaunchModel";
-import { getLaunchesAPI } from "../../api/getLaunches";
+import { GetLaunchesAPI } from "../../api/GetLaunches";
 import { getYears } from "../../utils/getYears";
 
 export interface LaunchContextProps {
@@ -49,7 +49,7 @@ export const LaunchProvider: React.FC = ({ children }) => {
             setLoading(false);
             setError(false);
             setFilter("");
-            const response = await getLaunchesAPI();
+            const response = await GetLaunchesAPI();
             setItems(response);
             setYears(getYears(response));
             setLoading(true);

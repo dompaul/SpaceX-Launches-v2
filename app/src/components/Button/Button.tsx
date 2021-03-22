@@ -7,12 +7,14 @@ interface ButtonProps {
   filter?: string;
   loaded: boolean;
   error: boolean;
+  testId: string;
   allowDisabledState: boolean;
   onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   classes,
+  testId,
   label,
   allowDisabledState,
   error,
@@ -23,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
   });
 
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <button data-testid={testId} onClick={onClick} className={buttonClasses}>
       {label}
     </button>
   );

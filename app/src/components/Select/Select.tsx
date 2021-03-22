@@ -7,12 +7,14 @@ interface SelectProps {
   loaded: boolean;
   error: boolean;
   label: string;
+  testId: string;
   years: number[];
   allowDisabledState: boolean;
 }
 
 export const Select: React.FC<SelectProps> = ({
   label,
+  testId,
   classes,
   years,
   error,
@@ -25,6 +27,7 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <select
       name={label}
+      data-testid={testId}
       className={selectClasses}
       onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
         setFilter(event.target.value);

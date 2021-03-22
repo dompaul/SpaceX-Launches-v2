@@ -8,12 +8,14 @@ interface LaunchListProps {
   filter: string;
   loaded: boolean;
   error: boolean;
+  testId: string;
   sort: boolean;
 }
 
 export const LaunchList: React.FC<LaunchListProps> = ({
   items,
   filter,
+  testId,
   loaded,
   error,
   sort,
@@ -21,11 +23,11 @@ export const LaunchList: React.FC<LaunchListProps> = ({
   let filteredItems = [...items];
 
   if (error) {
-    return <span>{LABEL.ERROR}</span>;
+    return <span data-testid="error-state-test">{LABEL.ERROR}</span>;
   }
 
   if (!loaded) {
-    return <span>{LABEL.LOADING}</span>;
+    return <span data-testid="loading-state-test">{LABEL.LOADING}</span>;
   }
 
   if (filter !== "") {
@@ -42,7 +44,7 @@ export const LaunchList: React.FC<LaunchListProps> = ({
   });
 
   return (
-    <ul className="launch-list">
+    <ul className="launch-list" data-testid={testId}>
       {itemsCopy.map((item, index) => {
         return <LaunchItem key={index} item={item} index={index} />;
       })}

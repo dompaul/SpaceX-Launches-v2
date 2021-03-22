@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body.tsx default renders with default snapshot 1`] = `
+<div>
+  <div
+    class="app__body"
+  >
+    <div
+      class="app__image-container"
+    >
+      <img
+        alt="Launch Home"
+        class="app__main-image"
+        src="launch-home.png"
+        srcset="launch-home.png 1x, launch-home@2x.png 2x, launch-home@3x.png 3x"
+      />
+    </div>
+    <div
+      class="app__launches"
+    >
+      <div
+        class="app__filters"
+      >
+        <select
+          class="select"
+          data-testid="filter-button-test"
+          name="Filter By Year"
+        >
+          <option
+            value=""
+          >
+            Filter By Year
+          </option>
+        </select>
+        <button
+          class="button button--sort"
+          data-testid="sort-button-test"
+        >
+          Sort Descending
+        </button>
+      </div>
+      <span
+        data-testid="loading-state-test"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;

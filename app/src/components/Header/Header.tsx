@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
         filter={filter}
         loaded={loaded}
         error={error}
+        testId="reload-button-test"
         onClick={() => listLaunches()}
         classes="button button--reload"
         label={LABEL.RELOAD}

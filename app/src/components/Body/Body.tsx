@@ -4,7 +4,7 @@ import LABEL from "../../constants/Labels";
 import { LaunchList } from "../LanuchList";
 import { Button } from "../Button";
 import { Select } from "../Select";
-import { useLaunchContext } from "../../contexts/LaunchContext/LaunchContext";
+import { useLaunchContext } from "../../contexts/LaunchContext";
 
 export const Body: React.FC = () => {
   const {
@@ -33,6 +33,7 @@ export const Body: React.FC = () => {
             classes="select"
             label={LABEL.FILTER_BY_YEAR}
             loaded={loaded}
+            testId="filter-button-test"
             error={error}
             years={years}
             allowDisabledState={true}
@@ -42,6 +43,7 @@ export const Body: React.FC = () => {
             loaded={loaded}
             error={error}
             allowDisabledState={true}
+            testId="sort-button-test"
             classes="button button--sort"
             onClick={() => setSort(!sort)}
             label={sort ? LABEL.ASC : LABEL.DESC}
@@ -49,6 +51,7 @@ export const Body: React.FC = () => {
         </div>
         <LaunchList
           items={items}
+          testId="launch-list-test"
           loaded={loaded}
           error={error}
           filter={filter}
