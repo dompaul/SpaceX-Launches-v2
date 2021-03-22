@@ -28,9 +28,14 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/path/to/dir/"
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.(spec|test|stories).{ts,tsx}",
+      "!src/models/**/*.*",
+      "!src/api/**/.*",
+      "!src/**/index.ts",
+      "!src/**/index.tsx",
+      "!src/**/**Mock**.*",
+      "!src/react-app-env.d.ts"
     ],
     "coverageThreshold": {
       "global": {
