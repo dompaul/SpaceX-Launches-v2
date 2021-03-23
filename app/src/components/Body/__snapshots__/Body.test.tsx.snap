@@ -3,47 +3,75 @@
 exports[`Body.tsx default renders with default snapshot 1`] = `
 <div>
   <div
-    class="app__body"
+    class="app"
   >
-    <div
-      class="app__image-container"
-    >
-      <img
-        alt="Launch Home"
-        class="app__main-image"
-        src="launch-home.png"
-        srcset="launch-home.png 1x, launch-home@2x.png 2x, launch-home@3x.png 3x"
-      />
-    </div>
-    <div
-      class="app__launches"
+    <header
+      class="app__header"
     >
       <div
-        class="app__filters"
+        class="app__logo"
       >
-        <select
-          class="select"
-          data-testid="filter-button-test"
-          name="Filter By Year"
+        <img
+          alt="SpaceX"
+          class="app__logo-image"
+          src="spacex-logo.png"
+        />
+        <span
+          class="app__logo-txt"
         >
-          <option
-            value=""
-          >
-            Filter By Year
-          </option>
-        </select>
-        <button
-          class="button button--sort"
-          data-testid="sort-button-test"
-        >
-          Sort Descending
-        </button>
+          Launches
+        </span>
       </div>
-      <span
-        data-testid="loading-state-test"
+      <button
+        class="button button--reload"
+        data-testid="reload-button-test"
       >
-        Loading...
-      </span>
+        Reload Data
+      </button>
+    </header>
+    <div
+      class="app__body"
+    >
+      <div
+        class="app__image-container"
+      >
+        <img
+          alt="Launch Home"
+          class="app__main-image"
+          src="launch-home.png"
+          srcset="launch-home.png 1x, launch-home@2x.png 2x, launch-home@3x.png 3x"
+        />
+      </div>
+      <div
+        class="app__launches"
+      >
+        <div
+          class="app__filters"
+        >
+          <select
+            class="select"
+            data-testid="filter-button-test"
+            name="Filter By Year"
+          >
+            <option
+              value=""
+            >
+              Filter By Year
+            </option>
+          </select>
+          <button
+            class="button button--sort"
+            data-testid="sort-button-test"
+          >
+            Sort Descending
+          </button>
+        </div>
+        <span
+          data-testid="loading-state-test"
+        >
+          Loading...
+        </span>
+      </div>
     </div>
   </div>
 </div>

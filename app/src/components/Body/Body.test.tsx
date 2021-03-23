@@ -1,5 +1,10 @@
-import { getByTestId, render, RenderResult } from "@testing-library/react";
-import { Body } from "./Body";
+import {
+  getByTestId,
+  render,
+  RenderResult,
+  fireEvent,
+} from "@testing-library/react";
+import { App } from "../App";
 import LABEL from "../../constants/Labels";
 import { LaunchContextMock } from "../../contexts/LaunchContext";
 
@@ -20,7 +25,7 @@ describe("Body.tsx", () => {
     beforeEach(() => {
       wrapper = render(
         <LaunchContextMock listLaunches={mockList}>
-          <Body />
+          <App />
         </LaunchContextMock>
       );
     });
@@ -44,7 +49,7 @@ describe("Body.tsx", () => {
     beforeEach(() => {
       wrapper = render(
         <LaunchContextMock listLaunches={mockList}>
-          <Body />
+          <App />
         </LaunchContextMock>
       );
     });
@@ -59,7 +64,7 @@ describe("Body.tsx", () => {
     beforeEach(() => {
       wrapper = render(
         <LaunchContextMock error={true} listLaunches={mockList}>
-          <Body />
+          <App />
         </LaunchContextMock>
       );
     });
@@ -67,6 +72,26 @@ describe("Body.tsx", () => {
     it("renders error state", () => {
       const errorMessage = getByTestId(wrapper.container, testIds.error);
       expect(errorMessage).toHaveTextContent(LABEL.ERROR);
+    });
+  });
+
+  describe("on click", () => {
+    beforeEach(() => {
+      wrapper = render(
+        <LaunchContextMock
+          setSort={mockSort}
+          sort={false}
+          loaded={true}
+          listLaunches={mockList}
+        >
+          <App />
+        </LaunchContextMock>
+      );
+    });
+
+    it("sort button", () => {
+      fireEvent.click(getByTestId(wrapper.container, testIds.sortButton));
+      expect(mockSort).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -79,16 +104,15 @@ describe("Body.tsx", () => {
           loaded={true}
           listLaunches={mockList}
         >
-          <Body />
+          <App />
         </LaunchContextMock>
       );
     });
 
     it("sorts list descending", () => {
-      const sortButton = getByTestId(wrapper.container, testIds.sortButton);
-      sortButton.click();
-      expect(mockSort).toHaveBeenCalledTimes(1);
-      expect(sortButton).toHaveTextContent(LABEL.DESC);
+      expect(
+        getByTestId(wrapper.container, testIds.sortButton)
+      ).toHaveTextContent(LABEL.DESC);
     });
   });
 
@@ -101,16 +125,15 @@ describe("Body.tsx", () => {
           loaded={true}
           listLaunches={mockList}
         >
-          <Body />
+          <App />
         </LaunchContextMock>
       );
     });
 
     it("sorts list ascending", () => {
-      const sortButton = getByTestId(wrapper.container, testIds.sortButton);
-      sortButton.click();
-      expect(mockSort).toHaveBeenCalledTimes(1);
-      expect(sortButton).toHaveTextContent(LABEL.ASC);
+      expect(
+        getByTestId(wrapper.container, testIds.sortButton)
+      ).toHaveTextContent(LABEL.ASC);
     });
   });
 });
