@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchList.tsx sort ascending order launch list is sorted ascending order 1`] = `
+<ul
+  class="launch-list"
+  data-testid="launch-list-test"
+>
+  <li
+    class="launch-item"
+  >
+    <div
+      class="launch-item__mission-content"
+    >
+      <span
+        class="launch-item__number"
+      >
+        #1
+      </span>
+      <span
+        class="launch-item__label"
+      >
+        FalconSat
+      </span>
+    </div>
+    <div
+      class="launch-item__meta-info"
+    >
+      <span
+        class="launch-item__date"
+      >
+        <time
+          datetime="1143239400000"
+        >
+          24th March 2006
+        </time>
+      </span>
+      <span
+        class="launch-item__rocket"
+      >
+        Falcon 1
+      </span>
+    </div>
+  </li>
+  <li
+    class="launch-item"
+  >
+    <div
+      class="launch-item__mission-content"
+    >
+      <span
+        class="launch-item__number"
+      >
+        #2
+      </span>
+      <span
+        class="launch-item__label"
+      >
+        RazakSat
+      </span>
+    </div>
+    <div
+      class="launch-item__meta-info"
+    >
+      <span
+        class="launch-item__date"
+      >
+        <time
+          datetime="1247456100000"
+        >
+          13th July 2009
+        </time>
+      </span>
+      <span
+        class="launch-item__rocket"
+      >
+        Falcon 1
+      </span>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`LaunchList.tsx sort descending order launch list is sorted descending order 1`] = `
+<ul
+  class="launch-list"
+  data-testid="launch-list-test"
+>
+  <li
+    class="launch-item"
+  >
+    <div
+      class="launch-item__mission-content"
+    >
+      <span
+        class="launch-item__number"
+      >
+        #2
+      </span>
+      <span
+        class="launch-item__label"
+      >
+        RazakSat
+      </span>
+    </div>
+    <div
+      class="launch-item__meta-info"
+    >
+      <span
+        class="launch-item__date"
+      >
+        <time
+          datetime="1247456100000"
+        >
+          13th July 2009
+        </time>
+      </span>
+      <span
+        class="launch-item__rocket"
+      >
+        Falcon 1
+      </span>
+    </div>
+  </li>
+  <li
+    class="launch-item"
+  >
+    <div
+      class="launch-item__mission-content"
+    >
+      <span
+        class="launch-item__number"
+      >
+        #1
+      </span>
+      <span
+        class="launch-item__label"
+      >
+        FalconSat
+      </span>
+    </div>
+    <div
+      class="launch-item__meta-info"
+    >
+      <span
+        class="launch-item__date"
+      >
+        <time
+          datetime="1143239400000"
+        >
+          24th March 2006
+        </time>
+      </span>
+      <span
+        class="launch-item__rocket"
+      >
+        Falcon 1
+      </span>
+    </div>
+  </li>
+</ul>
+`;

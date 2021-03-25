@@ -8,7 +8,7 @@ interface LaunchListProps {
   filter: string;
   loaded: boolean;
   error: boolean;
-  testId: string;
+  testId?: string;
   sort: boolean;
 }
 
